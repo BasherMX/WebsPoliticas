@@ -1,0 +1,82 @@
+<header class="header">
+    <section>
+        <img src="../../assets/images/logoColor.png" alt="">
+        <button class="header_button" (click)="scrollToSection()">CONOCEME</button>
+    </section>
+    <div class="image">
+        <img class="header_personaje_img" src="../../assets/images/personaje_header2.png" alt="">
+    </div>
+</header>
+
+<section class="slogan">
+    <h2>"Juventud y compromiso para un <span>Aguascalientes</span>  renovado"</h2>
+</section>
+
+<section class="About_me" id="about_me">
+    <!-- <img class="about_me_wave" src="../../assets/images/wave.svg" alt="">
+    
+    <aside About_me_aside> -->
+        <aside class="About_me_text">
+            <h2>¿Quien Soy?</h2>
+            <p *ngIf="width > 820">{{description}}</p>
+            <p *ngIf="width <= 820">{{descriptionMobile}}</p>
+
+            <img src="../../assets/images/arrow.png" alt="">
+        </aside>
+        <div class="About_me_image">
+            <img src="../../assets/images/personaje_about.png" alt="">
+        </div>
+    <!-- </aside> -->
+</section>
+
+
+<section class="proposals">
+
+    <h2>MIS PROPUESTAS</h2>
+
+    <div class="proposal_container" *ngFor="let item of propuestas; let i = index">
+
+        <div class="proposalR" *ngIf="i % 2 == 0">
+                <div class="proposalR_text">
+                    <h4>{{item.titulo}}</h4>
+                    <p>{{item.descripcion}}</p>
+                </div>
+                <div class="proposalR_image">
+                    <img [src]="'../../assets/images/' + item.imagen" alt="">
+                </div>
+        </div>
+
+
+        <div class="proposalL" *ngIf="i % 2 != 0">
+                <div class="proposalL_text">
+                    <h4>{{item.titulo}}</h4>
+                    <p>{{item.descripcion}}</p>
+                </div>
+                <div class="proposalL_image">
+                    <img [src]="'../../assets/images/' + item.imagen" alt="">
+                </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="contact_me">
+    <h2>¿Tienes alguna pregunta?</h2>
+    <h3>¡ CONTACTAME !</h3>
+    <div class="contact_me_aside">
+        <a href="" class="contact_me_image" target="_blank"><img src="../../assets/images/instagram.png" alt=""></a>
+        <a href="" class="contact_me_image" target="_blank"><img src="../../assets/images/whats.png" alt=""></a>
+        <a href="" class="contact_me_image" target="_blank"><img src="../../assets/images/facebook.png" alt=""></a>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer_image">
+        <img src="../../assets/images/logoBN.png" alt="">
+    </div>
+    <div class="footer_text">
+        <p>® Todos los derechos reservados</p>
+        <b>Ana Torrez - 2023</b>
+    </div>
+</footer>

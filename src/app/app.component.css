@@ -1,0 +1,9 @@
+.Author{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Poppins';
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+}

@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+:root{
+    /* colores */
+    --azul: #0084DC;
+    --morado: #6762C3;
+    --verde: #00C6B2;
+    --CTA: #8b0eca;
+
+}
+
+
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    position: relative;
+}
