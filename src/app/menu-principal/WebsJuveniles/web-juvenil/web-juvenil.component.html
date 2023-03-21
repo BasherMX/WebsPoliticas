@@ -64,9 +64,9 @@
     <h2>¿Tienes alguna pregunta?</h2>
     <h3>¡ CONTACTAME !</h3>
     <div class="contact_me_aside">
-        <a href="" class="contact_me_image" target="_blank"><img src="../../assets/images/instagram.png" alt=""></a>
-        <a href="" class="contact_me_image" target="_blank"><img src="../../assets/images/whats.png" alt=""></a>
-        <a href="" class="contact_me_image" target="_blank"><img src="../../assets/images/facebook.png" alt=""></a>
+        <a *ngFor="let item of socialMedia" [href]="item.link" class="contact_me_image" target="_blank">
+            <img [src]="'../../assets/images/' + item.image">
+        </a>
     </div>
 </section>
 

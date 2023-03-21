@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WebJuvenilComponent } from './web-juvenil/web-juvenil.component';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { WebJuvenilComponent } from './menu-principal/WebsJuveniles/web-juvenil/web-juvenil.component';
 
 const routes: Routes = [
-  { path: '', component: WebJuvenilComponent },
+  { path: '', component: MenuPrincipalComponent },
+  { path: 'WebJuvenil', component: WebJuvenilComponent },
 ];
 
 

@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-web-juvenil',
@@ -7,6 +8,7 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./web-juvenil.component.css']
 })
 export class WebJuvenilComponent implements OnInit{
+
   description = "Soy una joven con una gran pasión por hacer una diferencia positiva en el mundo. Me considero una persona creativa y curiosa, siempre buscando nuevas formas de aprender y crecer en mi conocimiento. Soy una líder natural, con habilidades para motivar e inspirar a otros a seguir adelante y alcanzar sus metas. Me enorgullezco de ser una persona empática y compasiva, lo que me permite conectarme con las necesidades de los demás y trabajar en equipo para lograr objetivos comunes. Como candidata juvenil, estoy comprometida con representar y defender los intereses de mi generación y de todas las personas en mi comunidad. Mi visión es un mundo más justo y equitativo, donde cada persona tenga la oportunidad de alcanzar su máximo potencial. Con dedicación y perseverancia, estoy segura de que puedo marcar la diferencia que quiero ver en el mundo.";
   descriptionMobile = "Soy una joven con una gran pasión por hacer una diferencia positiva en el mundo. Me considero una persona creativa y curiosa, siempre buscando nuevas formas de aprender y crecer en mi conocimiento. Soy una líder natural, con habilidades para motivar e inspirar a otros a seguir adelante y alcanzar sus metas. Me enorgullezco de ser una persona empática y compasiva, lo que me permite conectarme con las necesidades de los demás y trabajar en equipo para lograr objetivos comunes.";
   width = 0;
@@ -38,19 +40,40 @@ export class WebJuvenilComponent implements OnInit{
       imagen: 'img_propuesta5.png'
     }
   ];
+
+  socialMedia = [
+    {
+      image: 'instagram.png',
+      link: 'https://www.instagram.com/'
+    },
+    {
+      image: 'facebook.png',
+      link: 'https://www.facebook.com/'
+    },
+    {
+      image: 'whats.png',
+      link: 'https://wa.me/+524492777186?text=Hola'
+    }
+  ]
  
-  seccion1 = document.querySelector('#about_me');
+  AboutMeSection = document.querySelector('#about_me');
+
+  constructor(private titleService: Title){
+
+  }
 
   ngOnInit() {
     this.width = window.innerWidth;
     document.addEventListener('DOMContentLoaded', () => {
-      this.seccion1 = document.querySelector('#about_me');
+      this.AboutMeSection = document.querySelector('#about_me');
     });
+
+    this.titleService.setTitle('CONOCEME! | Ana Torrez');
   }
   
   scrollToSection() {
-    if (this.seccion1 != null) {
-      this.seccion1.scrollIntoView({ behavior: 'smooth' });
+    if (this.AboutMeSection != null) {
+      this.AboutMeSection.scrollIntoView({ behavior: 'smooth' });
       console.log('hola');
     }
     console.log('adios');
