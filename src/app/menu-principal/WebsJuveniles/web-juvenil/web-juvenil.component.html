@@ -1,55 +1,55 @@
-<header class="header flxCntr w_100">
-    <section class="flxCntr">
-        <img src="../../assets/images/logoColor.png" class="header_img w_80">
-        <button class="header_button" (click)="scrollToSection()">CONOCEME</button>
+<header class="hdr flxCntr w_100">
+    <section class="flxCntr hSct">
+        <img src="../../assets/images/logoColor.png" class="hdr_img w_80">
+        <button class="h_btn" (click)="scrollToSection()">CONOCEME</button>
     </section>
     <div class="image">
-        <img class="header_personaje_img w_90" src="../../assets/images/personaje_header2.png" alt="">
+        <img class="hdr_personaje_img w_90" src="../../assets/images/personaje_hdr2.png" alt="">
     </div>
 </header>
 
-<section class="slogan flxCntr w_100">
-    <h2>"Juventud y compromiso para un <span>Aguascalientes</span>  renovado"</h2>
+<section class="slg flxCntr w_100">
+    <h2>"Juventud y compromiso para un <span class="slSp">Aguascalientes</span>  renovado"</h2>
 </section>
 
-<section class="About_me flxCntr w_100 hv_100" id="about_me">
-        <aside class="About_me_text flxCntr">
+<section class="ab_me flxCntr w_100 hv_100" id="ab_me">
+        <aside class="ab_txt flxCntr">
             <h2>¿Quien Soy?</h2>
             <p *ngIf="width > 820" class="w_90">{{description}}</p>
             <p *ngIf="width <= 820" class="w_90">{{descriptionMobile}}</p>
 
             <img src="../../assets/images/arrow.png" class="w_10">
         </aside>
-        <div class="About_me_image flxCntr">
+        <div class="ab_img flxCntr">
             <img src="../../assets/images/personaje_about.png" alt="">
         </div>
     <!-- </aside> -->
 </section>
 
 
-<section class="proposals w_100">
+<section class="prp w_100">
 
     <h2>MIS PROPUESTAS</h2>
 
-    <div class="proposal_container w_100 flxCntr" *ngFor="let item of propuestas; let i = index">
+    <div class="prp_cnt w_100 flxCntr" *ngFor="let item of propuestas; let i = index">
 
-        <div class="proposalR w_80" *ngIf="i % 2 == 0">
-                <div class="proposalR_text w_90">
+        <div class="pr_R w_80" *ngIf="i % 2 == 0">
+                <div class="pr_R_txt w_90">
                     <h4>{{item.titulo}}</h4>
                     <p>{{item.descripcion}}</p>
                 </div>
-                <div class="proposalR_image flxCntr">
+                <div class="pr_R_img flxCntr">
                     <img [src]="'../../assets/images/' + item.imagen" alt="">
                 </div>
         </div>
 
 
-        <div class="proposalL w_80" *ngIf="i % 2 != 0">
-                <div class="proposalL_text w_90">
+        <div class="pr_L w_80" *ngIf="i % 2 != 0">
+                <div class="pr_L_text w_90">
                     <h4>{{item.titulo}}</h4>
                     <p>{{item.descripcion}}</p>
                 </div>
-                <div class="proposalL_image flxCntr">
+                <div class="pr_L_img flxCntr">
                     <img [src]="'../../assets/images/' + item.imagen" alt="">
                 </div>
         </div>
@@ -57,22 +57,22 @@
 
 </section>
 
-<section class="contact_me flxCntr">
+<section class="cn_me flxCntr">
     <h2 class="w_100">¿Tienes alguna pregunta?</h2>
     <h3 class="w_100">¡ CONTACTAME !</h3>
-    <div class="contact_me_aside w_80 flxCntr">
-        <a *ngFor="let item of socialMedia" [href]="item.link" class="contact_me_image" target="_blank">
-            <img [src]="'../../assets/images/' + item.image" class="w_80">
+    <div class="cn_me_a w_80 flxCntr">
+        <a *ngFor="let item of socialMedia" [href]="item.link" class="cn_me_image" target="_blank">
+            <img [src]="'../../assets/images/' + item.image" class="w_80 cn_img">
         </a>
     </div>
 </section>
 
 
-<footer class="footer flxCntr w_100">
-    <div class="footer_image flxCntr">
+<footer class="ftr flxCntr w_100">
+    <div class="ftr_img flxCntr">
         <img src="../../assets/images/logoBN.png" alt="">
     </div>
-    <div class="footer_text">
+    <div class="ftr_txt">
         <p>® Todos los derechos reservados</p>
         <b>Ana Torrez - 2023</b>
     </div>
