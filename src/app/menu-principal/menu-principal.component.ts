@@ -12,6 +12,10 @@ export class MenuPrincipalComponent {
     {
       text: 'Juveniles',
       route: 'WebJuvenil'
+    },
+    {
+      text: 'Informe de Actividades',
+      route: 'WebInformes1'
     }
   ]
 

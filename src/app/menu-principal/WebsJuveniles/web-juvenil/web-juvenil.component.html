@@ -9,7 +9,7 @@
 </header>
 
 <section class="slg flxCntr w_100">
-    <h2>"Juventud y compromiso para un <span class="slSp">Aguascalientes</span>  renovado"</h2>
+    <h2 data-aos="zoom-in">"Juventud y compromiso para un <span class="slSp">Aguascalientes</span>  renovado"</h2>
 </section>
 
 <section class="ab_me flxCntr w_100 hv_100" id="ab_me">
@@ -18,9 +18,12 @@
             <p *ngIf="width > 820" class="w_90">{{description}}</p>
             <p *ngIf="width <= 820" class="w_90">{{descriptionMobile}}</p>
 
-            <img src="../../assets/images/arrow.png" class="w_10">
+            <img src="../../assets/images/arrow.png" class="w_10" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="200"
+            data-aos-offset="0">
         </aside>
-        <div class="ab_img flxCntr">
+        <div class="ab_img flxCntr" >
             <img src="../../assets/images/personaje_about.png" alt="">
         </div>
     <!-- </aside> -->
@@ -33,7 +36,7 @@
 
     <div class="prp_cnt w_100 flxCntr" *ngFor="let item of propuestas; let i = index">
 
-        <div class="pr_R w_80" *ngIf="i % 2 == 0">
+        <div class="pr_R w_80" *ngIf="i % 2 == 0" data-aos="fade-right" data-aos-offset="200" data-aos-duration="400" style="z-index: 1;">
                 <div class="pr_R_txt w_90">
                     <h4>{{item.titulo}}</h4>
                     <p>{{item.descripcion}}</p>
@@ -44,13 +47,13 @@
         </div>
 
 
-        <div class="pr_L w_80" *ngIf="i % 2 != 0">
+        <div class="pr_L w_80" *ngIf="i % 2 != 0" data-aos="fade-left" data-aos-offset="200" data-aos-duration="400" style="z-index: 2;">
                 <div class="pr_L_txt w_90">
                     <h4>{{item.titulo}}</h4>
                     <p>{{item.descripcion}}</p>
                 </div>
                 <div class="pr_L_img flxCntr">
-                    <img [src]="'../../assets/images/' + item.imagen" alt="">
+                    <img [src]="'../../assets/images/' + item.imagen" alt="" >
                 </div>
         </div>
     </div>
@@ -59,8 +62,8 @@
 
 <section class="cn_me flxCntr">
     <h2 class="w_100">¿Tienes alguna pregunta?</h2>
-    <h3 class="w_100">¡ CONTACTAME !</h3>
-    <div class="cn_me_a w_80 flxCntr">
+    <h3 class="w_100" data-aos="zoom-in">¡ CONTACTAME !</h3>
+    <div class="cn_me_a w_80 flxCntr" data-aos="zoom-out-up">
         <a *ngFor="let item of socialMedia" [href]="item.link" class="cn_me_image" target="_blank">
             <img [src]="'../../assets/images/' + item.image" class="w_80 cn_img">
         </a>

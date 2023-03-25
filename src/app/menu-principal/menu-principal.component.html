@@ -1,3 +1,6 @@
-<div class="buttons">
-    <button *ngFor="let item of botones" (click)="goTo(item.route)" >{{item.text}}</button>
+
+<div class="d-flex align-items-center justify-content-center vh-100 vw-100 flex-wrap" style="gap: 30px;">
+    <button *ngFor="let item of botones" (click)="goTo(item.route)" class="btn">{{item.text}}</button>
+
 </div>
+  

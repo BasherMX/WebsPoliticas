@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import AOS from 'aos';
 
 
 @Component({
@@ -56,16 +57,18 @@ export class WebJuvenilComponent implements OnInit{
     }
   ]
  
-  AboutMeSection = document.querySelector('#about_me');
+  AboutMeSection = document.querySelector('#ab_me');
 
   constructor(private titleService: Title){
 
   }
 
   ngOnInit() {
+    AOS.init();
+
     this.width = window.innerWidth;
     document.addEventListener('DOMContentLoaded', () => {
-      this.AboutMeSection = document.querySelector('#about_me');
+      this.AboutMeSection = document.querySelector('#ab_me');
     });
 
     this.titleService.setTitle('CONOCEME! | Ana Torrez');
