@@ -7,6 +7,7 @@ import { WebJuvenilComponent } from './menu-principal/WebsJuveniles/web-juvenil/
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { WebJuvenil2Component } from './menu-principal/WebsJuveniles/web-juvenil2/web-juvenil2.component';
 import { WebInformes1Component } from './menu-principal/Webs-Politicas/web-informes1/web-informes1.component';
+import { WebCamp1Component } from './menu-principal/Webs-Campañas/web-camp1/web-camp1.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WebInformes1Component } from './menu-principal/Webs-Politicas/web-infor
     WebJuvenilComponent,
     MenuPrincipalComponent,
     WebJuvenil2Component,
-    WebInformes1Component
+    WebInformes1Component,
+    WebCamp1Component
   ],
   imports: [
     BrowserModule,

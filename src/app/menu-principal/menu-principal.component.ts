@@ -16,6 +16,10 @@ export class MenuPrincipalComponent {
     {
       text: 'Informe de Actividades',
       route: 'WebInformes1'
+    },
+    {
+      text: 'Campaña Política',
+      route: 'WebCampaña1'
     }
   ]
 
