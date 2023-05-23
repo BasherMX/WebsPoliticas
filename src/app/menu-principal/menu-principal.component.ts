@@ -18,8 +18,8 @@ export class MenuPrincipalComponent {
       route: 'WebInformes1'
     },
     {
-      text: 'Campaña Política',
-      route: 'WebCampaña1'
+      text: 'Campañas Políticas',
+      route: 'campañas'
     }
   ]
 

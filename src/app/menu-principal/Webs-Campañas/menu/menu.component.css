@@ -1,0 +1,30 @@
+
+.botonera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button{
+    width: 240px;
+    font-size: 1.1rem;
+    background-color: var(--morado);
+    color: white;
+    transition: all ease .3s;
+}
+
+button:hover{
+    color: white;
+    background-color: var(--CTA);
+    transform: scale(1.02);
+}
+
+
+
+@media screen AND (max-width: 500px) {
+    .botonera{
+        flex-direction: column;
+    }
+    
+}

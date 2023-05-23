@@ -9,7 +9,10 @@ const routes: Routes = [
   { path: '', component: MenuPrincipalComponent },
   { path: 'WebJuvenil', component: WebJuvenilComponent },
   { path: 'WebInformes1', component: WebInformes1Component },
-  { path: 'WebCampaña1', component: WebCamp1Component },
+  { 
+    path: 'campañas',
+    loadChildren: () => import('./menu-principal/Webs-Campañas/campaigns.module').then(m => m.CampaignsModule),
+  }
 ];
 
 
